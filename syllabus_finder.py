@@ -4,10 +4,10 @@ course_code = input("Write course code: ").upper()
 section = input("Write section code (01, 02 etc.): ")
 summer = input("Include summer semester? Y/N? ").upper()
 summer_check = True if summer == "Y" else False
+term = 2 + summer_check
 
 liste = ["2021-2022", "2020-2021", "2019-2020", "2018-2019", "2017-2018"]
 for i in liste:
-    term = 3 if summer_check else 2
     for j in range(1, term + 1):
         name = f"{i}-{j} - {course_code + section}"
         st = ".pdf"
